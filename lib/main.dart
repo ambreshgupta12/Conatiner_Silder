@@ -1,3 +1,4 @@
+import 'package:app11/calculator.dart';
 import 'package:app11/grid.dart';
 import 'package:app11/silder.dart';
 import 'package:flutter/material.dart';
@@ -52,30 +53,32 @@ class _MyhomeState extends State<Myhome> {
                    width: 90.0,
                    color: Colors.redAccent,
                    child: Card(
-                                        child: ListTile(
-                                          title: FlatButton.icon(
+                         child: ListTile(
+                              title: FlatButton.icon(
                          onPressed: (){
-
-                           Navigator.push(context, MaterialPageRoute(builder: (context)=>Grid()));
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Grid()));
                          }, 
                          icon:Icon(Icons.home),
                           label: Text("Home"), ),
                           subtitle: Text("4", textAlign: TextAlign.center, style: TextStyle(fontSize:60.0),),
                      ),
                    ),
-                      
-                    
-                      
-                 ),
-                 
-               
-               Card(
-                   child: Container(
+               ),
+                Container(
                    height: 90.0,
                    width: 90.0,
-                   color: Colors.red,
-                   child: Center(child: Text("Sagar Koju"))
-                 ),
+                   color: Colors.redAccent,
+                   child: Card(
+                         child: ListTile(
+                              title: FlatButton.icon(
+                         onPressed: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Cal()));
+                         }, 
+                         icon:Icon(Icons.home),
+                          label: Text("Calculator"), ),
+                          subtitle: Text("4", textAlign: TextAlign.center, style: TextStyle(fontSize:60.0),),
+                     ),
+                   ),
                ),
                Card(
                    child: Container(
@@ -133,7 +136,7 @@ class _MyhomeState extends State<Myhome> {
                    child: Center(child: Text("Sagar Koju"))
                  ),
                ),
-              
+             
              ],
 
              )
