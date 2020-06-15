@@ -86,7 +86,7 @@ class _CalState extends State<Cal> {
                   a = int.parse(txtfit1.text);  
                   b= int.parse(txtfit2.text);
                   c= a*b;
-
+             
                 });
               },
               child: Text("Mul"),

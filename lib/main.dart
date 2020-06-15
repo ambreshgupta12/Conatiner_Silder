@@ -1,6 +1,11 @@
 import 'package:app11/calculator.dart';
+import 'package:app11/cart.dart';
 import 'package:app11/grid.dart';
+import 'package:app11/map.dart';
+import 'package:app11/page/dell.dart';
+import 'package:app11/page/dialog.dart';
 import 'package:app11/silder.dart';
+import 'package:app11/stack.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -12,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark(),
       home: Myhome(),
       debugShowCheckedModeBanner: false,
     );
@@ -80,37 +86,69 @@ class _MyhomeState extends State<Myhome> {
                      ),
                    ),
                ),
-               Card(
-                   child: Container(
+              Container(
                    height: 90.0,
                    width: 90.0,
-                   color: Colors.blue,
-                   child: Center(child: Text("Sagar Koju"))
-                 ),
+                   color: Colors.redAccent,
+                   child: Card(
+                         child: ListTile(
+                              title: FlatButton.icon(
+                         onPressed: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Sta()));
+                         }, 
+                         icon:Icon(Icons.home),
+                          label: Text("Stack"), ),
+                          subtitle: Text("4", textAlign: TextAlign.center, style: TextStyle(fontSize:60.0),),
+                     ),
+                   ),
                ),
-               Card(
-                   child: Container(
+               Container(
                    height: 90.0,
                    width: 90.0,
-                   color: Colors.blueAccent,
-                   child: Center(child: Text("Sagar Koju"))
-                 ),
+                   color: Colors.redAccent,
+                   child: Card(
+                         child: ListTile(
+                              title: FlatButton.icon(
+                         onPressed: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));
+                         }, 
+                         icon:Icon(Icons.shopping_cart),
+                          label: Text("CART"), ),
+                          subtitle: Text("4", textAlign: TextAlign.center, style: TextStyle(fontSize:60.0),),
+                     ),
+                   ),
                ),
-               Card(
-                   child: Container(
+               Container(
                    height: 90.0,
                    width: 90.0,
-                   color: Colors.grey,
-                   child: Center(child: Text("Sagar Koju"))
-                 ),
+                   color: Colors.redAccent,
+                   child: Card(
+                         child: ListTile(
+                              title: FlatButton.icon(
+                         onPressed: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>ListMap()));
+                         }, 
+                         icon:Icon(Icons.map),
+                          label: Text("Map"), ),
+                          subtitle: Text("4", textAlign: TextAlign.center, style: TextStyle(fontSize:60.0),),
+                     ),
+                   ),
                ),
-               Card(
-                   child: Container(
+               Container(
                    height: 90.0,
                    width: 90.0,
-                   color: Colors.blueGrey,
-                   child: Center(child: Text("Sagar Koju"))
-                 ),
+                   color: Colors.redAccent,
+                   child: Card(
+                         child: ListTile(
+                              title: FlatButton.icon(
+                         onPressed: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>ListAlert()));
+                         }, 
+                         icon:Icon(Icons.add_alert),
+                          label: Text("Alert Dialog"), ),
+                          subtitle: Text("4", textAlign: TextAlign.center, style: TextStyle(fontSize:60.0),),
+                     ),
+                   ),
                ),
                Card(
                    child: Container(
