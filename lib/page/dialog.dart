@@ -1,4 +1,3 @@
-import 'package:app11/cart.dart';
 import 'package:app11/page/dell111.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +11,7 @@ class ListAlert extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
+         
           AlertDialog(
           backgroundColor:Colors.blue, 
           title: Text("Reset Setting?"),

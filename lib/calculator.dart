@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
-
-
 class Cal extends StatefulWidget {
   @override
   _CalState createState() => _CalState();
 }
-
 class _CalState extends State<Cal> {
-
   int a;
   int b;
   int c=0;
-
   TextEditingController txtfit1 = TextEditingController();
   TextEditingController txtfit2 = TextEditingController();
   @override

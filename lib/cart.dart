@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './page/dell.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
+
+// import 'package:rflutter_alert/rflutter_alert.dart';
 class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,9 +15,7 @@ class Cart extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children:<Widget>[
-             
-           
-                  Card(
+               Card(
               color: Colors.yellow,
               elevation: 10.0,
               child: Padding(
@@ -56,36 +54,7 @@ class Cart extends StatelessWidget {
               },
               child: Text("GO Back", style: TextStyle(color: Colors.black, fontSize: 16.0),),
               ),
-             
-              AlertDialog(
-                backgroundColor: Colors.blueGrey,
-               title: ListTile( leading:Text("Accept?"),
-                 trailing: GestureDetector(child: Text("X"),
-                 onTap: (){
-                   Navigator.pop(context);
-                 },
-                 ),
-               ),
-               
-               
-               content: Text("Do you Accept?"),
-               scrollable: true,
-              
-               actions: <Widget>[
-                
-                 FlatButton(onPressed: (){
-                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Sagar()));
-                 }, child:Text("NO")),
-                 FlatButton(onPressed: (){}, child:Text("Yes")),
-                ],
-                elevation: 24.0,
-                
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0)
-                )
-
-             ),
-          ]
+             ]
         ),
       ),
       

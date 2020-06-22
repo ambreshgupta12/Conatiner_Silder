@@ -32,9 +32,7 @@ class ListMap extends StatelessWidget {
           );
         },
       ),
-        
-   
-    );
+       );
   }
 }
 
