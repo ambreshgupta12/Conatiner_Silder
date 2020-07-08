@@ -13,7 +13,7 @@ class ListAlert extends StatelessWidget {
         children: <Widget>[
          
           AlertDialog(
-          backgroundColor:Colors.blue, 
+          // backgroundColor:Colors.blue, 
           title: Text("Reset Setting?"),
           content: Text("This will be reset all the device in your mobile"),
           actions: <Widget>[
@@ -33,5 +33,35 @@ class ListAlert extends StatelessWidget {
       ),
       
     );
+  }
+}
+
+class Sa extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+   return Center(
+      child: RaisedButton(
+        onPressed: () {
+          final SnackBar snackBar = SnackBar(
+            content: Text('Yay! A SnackBar!'),
+             shape: RoundedRectangleBorder(
+               borderRadius: BorderRadius.circular(30.0)
+             ),
+            duration: Duration(microseconds: 3000),
+            action: SnackBarAction(
+              label: 'Undo',
+              onPressed: () {
+                // Some code to undo the change.
+              },
+            ),
+          );
+
+          // Find the Scaffold in the widget tree and use
+          // it to show a SnackBar.
+          // Scaffold.of(context).showSnackBar(snackBar);
+          Scaffold.of(context).showSnackBar(snackBar);
+        }
+      ),
+   );
   }
 }
